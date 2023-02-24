@@ -12,7 +12,7 @@ class Soal {
 
     print('2. Buatlah sebuah program untuk mencetak tabel perkalian.');
     print('\t- Sampel Input: 9');
-    print('\t- Sampel Output: 18');
+    print('\t- Sampel Output: 18 dalam gambar');
     print('##########################');
   }
 }
@@ -59,9 +59,9 @@ class SoalSatu extends Soal {
     }
     print('');
     if (angkaPrima) {
-      stdout.write('$n adalah angka prima\n');
+      stdout.write('$n adalah bilangan prima\n');
     } else {
-      stdout.write('$n adalah bukan angka prima\n');
+      stdout.write('$n adalah bukan bilangan prima\n');
     }
     print('');
   }

@@ -125,5 +125,5 @@ void main(List<String> args) {
   pemilihan.choose();
 
   /// Khusus Soal 4, Function dipanggil di function main.(Uncomment Code Dibawah)
-  // print(hLuasLingkaran(10));
+  //  print('Luas Lingkaran dari 10 adalah ${hLuasLingkaran(10)}');
 }
