@@ -32,10 +32,24 @@ void satu() {
     'amuse',
     'HKS'
   ];
+
+  var dataDua = <String>[
+    'JS Racing',
+    'amuse',
+    'spoon',
+    'spoon',
+    'JS Racing',
+    'amuse'
+  ];
+
   // Menghapus nilai sama dengan set dari variabel data.
   var uniqueData = List<String>.from(Set<String>.from(data));
+  var uniqueDataDua = List<String>.from(Set<String>.from(dataDua));
   print('Input: $data');
   print('Output: $uniqueData');
+
+  print("Input: $dataDua");
+  print('Output: $uniqueDataDua');
 }
 
 void dua() {
