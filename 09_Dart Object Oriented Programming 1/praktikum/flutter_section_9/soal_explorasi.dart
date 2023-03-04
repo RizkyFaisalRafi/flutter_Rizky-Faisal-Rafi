@@ -56,7 +56,7 @@ class BookStore {
     _books.add(Book(id, title, publisher, price, category));
   }
 
-  // Mendaptakn Semua Buku
+  // Mendapatkan Semua Buku
   List<Book> getAllBooks() {
     return _books;
   }

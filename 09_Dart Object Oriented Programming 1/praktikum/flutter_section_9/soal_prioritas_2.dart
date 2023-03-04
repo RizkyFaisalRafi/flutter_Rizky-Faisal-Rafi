@@ -21,7 +21,7 @@ void main(List<String> args) {
 
 class Soal {
   void tampilanUtama() {
-    print('\n###### Daftar Isi Soal Prioritas 1 ######');
+    print('\n###### Daftar Isi Soal Prioritas 2 ######');
     print('1. Buatlah sebuah class Calculator.');
     print('2. Buatlah sebuah class Course dan Student.');
     print('##########################');
