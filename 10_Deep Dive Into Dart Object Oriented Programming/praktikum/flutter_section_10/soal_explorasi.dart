@@ -20,7 +20,6 @@ void main(List<String> args) {
       'Luas dari Width(${rectangle.width}) dan Height(${rectangle.height}) = ${rectangle.getArea()}');
   print(
       'Keliling dari Width(${rectangle.width}) dan Height(${rectangle.height}) = ${rectangle.getPerimeter()}');
-  print(rectangle.getPerimeter());
 }
 
 class Shape {
