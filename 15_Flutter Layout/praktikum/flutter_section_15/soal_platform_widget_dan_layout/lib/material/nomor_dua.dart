@@ -9,7 +9,7 @@ class NomorDua extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.light(),
+      theme: ThemeData.dark(),
       home: const ListVieww(),
     );
   }
@@ -81,7 +81,9 @@ class ListVieww extends StatelessWidget {
                         Text(
                           data.nameKontak,
                           style: const TextStyle(
-                              fontSize: 16.0, fontWeight: FontWeight.bold),
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black),
                         ),
                         Text(
                           data.numberTelp,

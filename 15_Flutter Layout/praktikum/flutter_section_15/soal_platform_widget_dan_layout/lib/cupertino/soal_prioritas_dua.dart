@@ -10,7 +10,6 @@ class SoalPrioritasDua extends StatelessWidget {
       theme: CupertinoThemeData(brightness: Brightness.dark),
       home: Cupertino(),
     );
-
   }
 }
 
@@ -25,9 +24,9 @@ class Cupertino extends StatelessWidget {
           middle: const Text('CupertinoApp'),
         ),
         child: const Center(
-          child: Text('This is CupertinoApp',
+          child: Text(
+            'This is CupertinoApp',
           ),
         ));
   }
 }
-

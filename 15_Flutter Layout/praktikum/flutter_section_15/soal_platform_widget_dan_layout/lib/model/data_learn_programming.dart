@@ -8,10 +8,9 @@ class DataLearnProgramming {
 
 var dataProgrammingList = [
   DataLearnProgramming(programming: 'Learn Flutter'),
-  DataLearnProgramming(programming: 'Learn ReactJS'),
-  DataLearnProgramming(programming: 'Learn VueJS'),
+  DataLearnProgramming(programming: '\nLearn ReactJS\n\n\nLearn VueJS\n'),
   DataLearnProgramming(programming: 'Learn Tailwind CSS'),
-  DataLearnProgramming(programming: 'Learn UI/UX'),
-  DataLearnProgramming(programming: 'Learn Figma'),
+  DataLearnProgramming(programming: '\nLearn UI/UX'),
+  DataLearnProgramming(programming: '\nLearn Figma'),
   DataLearnProgramming(programming: 'Learn Digital Marketing'),
 ];

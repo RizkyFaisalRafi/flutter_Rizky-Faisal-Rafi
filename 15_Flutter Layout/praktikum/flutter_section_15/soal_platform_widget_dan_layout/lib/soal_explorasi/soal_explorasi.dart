@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../model/dataLearnProgramming.dart';
+import '../model/data_learn_programming.dart';
 
 class SoalExplorasi extends StatelessWidget {
   const SoalExplorasi({Key? key}) : super(key: key);
@@ -41,10 +41,22 @@ class LearnProgramming extends StatelessWidget {
           final DataLearnProgramming dataProgramming =
               dataProgrammingList[index];
           return InkWell(
-            /// Menambahkan interaksi pengguna
             onTap: () {},
-            child: ListTile(
-              title: Text(dataProgramming.programming),
+            child: Column(
+              children: [
+                ListTile(
+                  title: Text(
+                    dataProgramming.programming,
+                    style: const TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                ),
+                const Divider(
+                  height: 1,
+                  thickness: 1,
+                  indent: 18,
+                  endIndent: 0,
+                ),
+              ],
             ),
           );
         },
