@@ -83,11 +83,13 @@ class _ContactPageState extends State<ContactPage> {
                     // ),
 
                     TextField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         // Agar tetap tampil hintTextnya
                         labelText: 'Name',
                         hintText: 'Insert Your Name',
+                        fillColor: Colors.purple,
+
                       ),
                       /// digunakan untuk menghubungkan input field
                       /// dengan sebuah controller yang bertanggung jawab untuk mengatur nilai dari input field tersebut.
