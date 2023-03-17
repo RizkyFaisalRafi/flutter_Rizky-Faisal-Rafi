@@ -52,10 +52,9 @@ class ListVieww extends StatelessWidget {
           return InkWell(
             /// Menambahkan interaksi pengguna
             onTap: () {},
-            child: Container(
+            child: SizedBox(
                 width: 80,
                 height: 80,
-                color: Colors.transparent, // Transparant
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [

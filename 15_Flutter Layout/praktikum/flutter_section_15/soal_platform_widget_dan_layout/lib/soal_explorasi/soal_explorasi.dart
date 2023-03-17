@@ -37,7 +37,7 @@ class LearnProgramming extends StatelessWidget {
 
       /// builder: widget berdasarkan data local yang diberikan.
       body: ListView.builder(
-        itemBuilder: (context, index) {
+        itemBuilder: (context,   index) {
           final DataLearnProgramming dataProgramming =
               dataProgrammingList[index];
           return InkWell(
