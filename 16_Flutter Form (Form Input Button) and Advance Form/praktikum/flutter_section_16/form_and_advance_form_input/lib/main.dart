@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:form_and_advance_form_input/contact_page.dart';
+import 'package:form_and_advance_form_input/advance_form/contact_page_advance.dart';
+import 'package:form_and_advance_form_input/form/contact_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,12 +13,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Form and Advance Form',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-
         primarySwatch: Colors.blue,
       ),
-      home: const ContactPage(title: 'Contacts'),
+      home: const ContactPageAdvance(
+        title: 'Interactive Widgets',
+      ),
     );
   }
 }
