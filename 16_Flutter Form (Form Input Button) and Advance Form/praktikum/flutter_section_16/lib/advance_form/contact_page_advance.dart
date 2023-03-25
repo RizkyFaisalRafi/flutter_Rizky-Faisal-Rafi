@@ -37,9 +37,7 @@ class _ContactPageAdvanceState extends State<ContactPageAdvance> {
       return "Nama tidak boleh kosong";
     } else if (name.split('').length < 2) {
       return 'Nama harus terdiri dari minimal 2 kata';
-    } else if (name
-        .split(' ')
-        .any((element) => element[0] != element[0].toUpperCase())) {
+    } else if (!name.startsWith(RegExp(r'[A-Z]'))) {
       return 'Kata harus dimulai dengan huruf kapital.';
     } else if (name.contains(RegExp(r'[!@#<>?":_`~;[\]\\|=+)(*&^%\d-]'))) {
       return 'Nama tidak boleh mengandung angka/karakter khusus.';
@@ -280,7 +278,8 @@ class _ContactPageAdvanceState extends State<ContactPageAdvance> {
               alignment: Alignment.centerRight,
               child: ElevatedButton(
                 onPressed: () {
-                  if (formKey.currentState!.validate() && fileText!.isNotEmpty) {
+                  if (formKey.currentState!.validate() &&
+                      fileText!.isNotEmpty) {
                     addContact();
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
@@ -412,7 +411,8 @@ class _ContactPageAdvanceState extends State<ContactPageAdvance> {
     if (name.isNotEmpty &&
         number.isNotEmpty &&
         date.isNotEmpty &&
-        color.toString().isNotEmpty && fileText!.isNotEmpty) {
+        color.toString().isNotEmpty &&
+        fileText!.isNotEmpty) {
       setState(
         () {
           contacts.add(ModelDataAdvance(
