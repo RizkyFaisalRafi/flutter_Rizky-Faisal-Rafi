@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:state_management_provider/model/model_data.dart';
 
+import '../animation/animations.dart';
+
 class ContactPageProvider with ChangeNotifier {
   var formKey = GlobalKey<FormState>();
   final edtName = TextEditingController();
@@ -55,9 +57,15 @@ class ContactPageProvider with ChangeNotifier {
 
   void changeContact(int index, context) {
     int selectedIndex = -1;
-    showDialog(
+    showGeneralDialog(
       context: context,
-      builder: (context) {
+      barrierLabel: '',
+      transitionDuration: const Duration(milliseconds: 600),
+      barrierDismissible: true,
+      transitionBuilder: (context, animation, secondaryAnimation, child) {
+        return Animations.fromBottom(animation, secondaryAnimation, child);
+      },
+      pageBuilder: (animation, secondaryAnimation, child) {
         return SimpleDialog(
           title: const Text('Ubah'),
           children: [

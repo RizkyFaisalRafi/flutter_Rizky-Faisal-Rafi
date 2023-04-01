@@ -44,6 +44,9 @@ class ContactPageAdvance extends StatelessWidget {
                             itemBuilder: (context, index) => getRowList(index),
                           ),
               ),
+              const SizedBox(
+                height: 40,
+              )
             ],
           ),
         ),

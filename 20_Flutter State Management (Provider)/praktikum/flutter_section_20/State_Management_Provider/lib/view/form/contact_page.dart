@@ -35,7 +35,10 @@ class ContactPage extends StatelessWidget {
                         shrinkWrap: true,
                         itemCount: value.contacts.length,
                         itemBuilder: (context, index) => getRowList(index),
-                      )
+                      ),
+                const SizedBox(
+                  height: 40,
+                )
               ],
             ),
           ),

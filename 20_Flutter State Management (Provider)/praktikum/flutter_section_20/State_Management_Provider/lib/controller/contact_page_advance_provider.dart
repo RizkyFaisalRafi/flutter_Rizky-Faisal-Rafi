@@ -4,6 +4,8 @@ import 'package:d_method/d_method.dart';
 import 'package:open_file/open_file.dart';
 import 'package:state_management_provider/model/model_data_advance.dart';
 
+import '../animation/animations.dart';
+
 class ContactPageAdvanceProvider with ChangeNotifier {
   Color _currentColor = Colors.orange;
   String? fileText = '';
@@ -106,10 +108,16 @@ class ContactPageAdvanceProvider with ChangeNotifier {
   }
 
   /// Ubah
-  changeContact(BuildContext context, int index) {
-    showDialog(
+  dynamic changeContact(BuildContext context, int index) {
+    showGeneralDialog(
       context: context,
-      builder: (context) {
+      barrierLabel: '',
+      transitionDuration: const Duration(milliseconds: 600),
+      barrierDismissible: true,
+      transitionBuilder: (context, animation, secondaryAnimation, child) {
+        return Animations.fromBottom(animation, secondaryAnimation, child);
+      },
+      pageBuilder: (animation, secondaryAnimation, child) {
         return SimpleDialog(
           title: const Text('Ubah'),
           children: [
@@ -234,9 +242,15 @@ class ContactPageAdvanceProvider with ChangeNotifier {
   }
 
   informaton(BuildContext context) {
-    return showDialog(
+    return showGeneralDialog(
       context: context,
-      builder: (context) {
+      barrierLabel: '',
+      transitionDuration: const Duration(milliseconds: 600),
+      barrierDismissible: true,
+      transitionBuilder: (context, animation, secondaryAnimation, child) {
+        return Animations.fromBottom(animation, secondaryAnimation, child);
+      },
+      pageBuilder: (animation, secondaryAnimation, child) {
         return SimpleDialog(
           title: const Text('Information'),
           children: [
@@ -252,7 +266,7 @@ class ContactPageAdvanceProvider with ChangeNotifier {
                   Text('FileName: $fileText'),
                 ],
               ),
-            )
+            ),
           ],
         );
       },
