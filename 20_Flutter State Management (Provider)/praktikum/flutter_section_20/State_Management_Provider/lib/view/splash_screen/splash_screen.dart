@@ -1,14 +1,15 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
 
-class SplashScreenn extends StatefulWidget {
-  const SplashScreenn({Key? key}) : super(key: key);
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  State<SplashScreenn> createState() => _SplashScreennState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreennState extends State<SplashScreenn> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Timer(

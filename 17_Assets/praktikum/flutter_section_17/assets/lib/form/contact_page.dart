@@ -108,7 +108,6 @@ class _ContactPageState extends State<ContactPage> {
             const SizedBox(
               height: 16,
             ),
-
             /// Form Number Telephone
             TextFormField(
               validator: (value) => validatePhone(value),
