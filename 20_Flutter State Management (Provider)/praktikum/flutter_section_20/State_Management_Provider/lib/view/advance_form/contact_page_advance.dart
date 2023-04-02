@@ -5,7 +5,7 @@ import 'package:intl/intl.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 
 class ContactPageAdvance extends StatelessWidget {
-  const ContactPageAdvance({super.key});
+  const ContactPageAdvance({super.key, required String title});
 
   @override
   Widget build(BuildContext context) {

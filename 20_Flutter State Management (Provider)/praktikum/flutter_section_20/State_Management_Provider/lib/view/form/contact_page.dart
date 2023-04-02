@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:state_management_provider/controller/contact_page_provider.dart';
 
 class ContactPage extends StatelessWidget {
-  const ContactPage({super.key});
+  const ContactPage({super.key, required String title});
 
   @override
   Widget build(BuildContext context) {

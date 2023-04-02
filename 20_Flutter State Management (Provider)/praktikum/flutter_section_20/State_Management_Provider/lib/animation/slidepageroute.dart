@@ -4,7 +4,7 @@ class SlidePageRoute extends PageRouteBuilder {
   final Widget page;
   SlidePageRoute({required this.page})
       : super(
-          transitionDuration: const Duration(seconds: 10),
+          transitionDuration: const Duration(seconds: 1),
           pageBuilder: (context, animation, secondaryAnimation) => page,
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             return SlideTransition(

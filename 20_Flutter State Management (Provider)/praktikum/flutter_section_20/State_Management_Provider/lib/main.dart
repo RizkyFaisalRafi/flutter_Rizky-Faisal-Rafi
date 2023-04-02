@@ -24,17 +24,17 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const SplashScreen(),
         '/home-page': (context) => const HomePage(),
-        '/contact-page': (context) => const ContactPage(),
-        '/contact-page-advance': (context) => const ContactPageAdvance(),
+        '/contact-page': (context) => const ContactPage(title: 'Contacts',),
+        '/contact-page-advance': (context) => const ContactPageAdvance(title: 'Interactive Widgets',),
         '/assets-page': (context) => const AssetsPage(),
       },
       onGenerateRoute: (settings) {
         if (settings.name == '/assets-page') {
           return SlidePageRoute(page: const AssetsPage());
         } else if (settings.name == '/contact-page') {
-          return SlidePageRoute(page: const ContactPage());
+          return SlidePageRoute(page: const ContactPage(title: 'Contacts',));
         } else if (settings.name == '/contact-page-advance') {
-          return SlidePageRoute(page: const ContactPageAdvance());
+          return SlidePageRoute(page: const ContactPageAdvance(title: 'Interactive Widgets',));
         }
         return null;
       },

@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../animation/slidepageroute.dart';
+import '../advance_form/contact_page_advance.dart';
+import '../assets/assets_page.dart';
+import '../form/contact_page.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -50,7 +55,13 @@ class HomePage extends StatelessWidget {
                       IconButton(
                         icon: const Icon(Icons.keyboard_arrow_right),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/contact-page');
+                          /// Animation Transition
+                          Navigator.push(
+                            context,
+                            SlidePageRoute(
+                              page: const ContactPage(title: 'Contacts'),
+                            ),
+                          );
                         },
                       )
                     ],
@@ -84,7 +95,14 @@ class HomePage extends StatelessWidget {
                       IconButton(
                         icon: const Icon(Icons.keyboard_arrow_right),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/contact-page-advance');
+                          /// Animation Transition
+                          Navigator.push(
+                            context,
+                            SlidePageRoute(
+                              page: const ContactPageAdvance(
+                                  title: 'Interactive Widgets'),
+                            ),
+                          );
                         },
                       )
                     ],
@@ -118,7 +136,13 @@ class HomePage extends StatelessWidget {
                       IconButton(
                         icon: const Icon(Icons.keyboard_arrow_right),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/assets-page');
+                          /// Animation Transition
+                          Navigator.push(
+                            context,
+                            SlidePageRoute(
+                              page: const AssetsPage(),
+                            ),
+                          );
                         },
                       )
                     ],

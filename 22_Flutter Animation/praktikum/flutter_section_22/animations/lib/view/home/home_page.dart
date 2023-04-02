@@ -34,7 +34,6 @@ class HomePage extends StatelessWidget {
             InkWell(
               borderRadius: BorderRadius.circular(16),
               onTap: () {
-                // Navigator.pushNamed(context, '/contact-page');
                 Navigator.pushNamed(context, contactPage);
               },
               child: Card(
