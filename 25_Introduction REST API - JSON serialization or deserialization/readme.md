@@ -11,9 +11,7 @@
 
 > HTTP
 - Protokol yang digunakan untuk berkirim data pada internet, biasanya data tersebut berbentuk media web
-- Pola Komunikasi:
-        - Client mengirim request
-        - Server mengolah dan membalas dengan memberi response
+- Pola Komunikasi: Client mengirim request dan Server mengolah dan membalas dengan memberi response
 
 - Struktur Request: URL(Alamat halaman yang akan disimpan), Method GET, POST, PUT, DELETE(Menunjukan aksi yang diinginkan), Header(Informasi tambahan terkait request yang dikirimkan), Body(Data yang disertakan bersama request)
 
