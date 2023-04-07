@@ -1,7 +1,6 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_section_23/explorasi/assets/home_page.dart';
-import 'package:flutter_section_23/task_management_lanjutan/screens/task_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -22,26 +21,25 @@ class _LoginScreenState extends State<LoginScreen> {
   late bool newUser;
 
   /// Fungsi yang pertama kali dipanggil sebelum widget treenya dibangun.
-  @override
-  void initState() {
-    super.initState();
-    checkLogin();
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   checkLogin();
+  // }
 
-  void checkLogin() async {
-    loginData = await SharedPreferences.getInstance();
-    newUser = loginData.getBool('login') ?? true;
+  // void checkLogin() async {
+  //   loginData = await SharedPreferences.getInstance();
+  //   newUser = loginData.getBool('login') ?? true;
 
-    if (newUser == false) {
-      // ignore: use_build_context_synchronously
-      Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const TaskScreen(),
-          ),
-          (route) => false);
-    }
-  }
+  //   if (newUser == false) {
+  //     Navigator.pushAndRemoveUntil(
+  //         context,
+  //         MaterialPageRoute(
+  //           builder: (context) => const HalamanDua(),
+  //         ),
+  //         (route) => false);
+  //   }
+  // }
 
   @override
   void dispose() {
@@ -55,7 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Log In Screen'),
+        title: const Text('Halaman Satu'),
       ),
       body: Container(
         padding: const EdgeInsets.all(16),

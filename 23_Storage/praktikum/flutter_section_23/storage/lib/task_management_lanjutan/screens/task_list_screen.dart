@@ -21,6 +21,7 @@ class TaskListcreen extends StatelessWidget {
                 return InkWell(
                   onTap: () async {
                     final selectedTask = await manager.getTaskById(item.id!);
+                    // ignore: use_build_context_synchronously
                     Navigator.push(
                       context,
                       MaterialPageRoute(

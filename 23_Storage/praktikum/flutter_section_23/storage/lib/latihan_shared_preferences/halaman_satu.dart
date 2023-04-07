@@ -33,6 +33,7 @@ class _HalamanSatuState extends State<HalamanSatu> {
     newUser = loginData.getBool('login') ?? true;
 
     if (newUser == false) {
+      // ignore: use_build_context_synchronously
       Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(
