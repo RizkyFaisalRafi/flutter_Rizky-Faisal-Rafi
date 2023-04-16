@@ -30,10 +30,14 @@
 
 > 2 Cara melakukan Unit Test
 - Manual yaitu Unit dijalankan dan dicek hasilnya secara manual
-- Automated yaitu Menulis Script yang dapat dijalankan berkali kali menggunakan test runner
-
+- Automated yaitu Menulis Script yang dapat dijalankan berkali kali menggunakan test runner(Tambahkan Dependencies test didalam dev_dependencies: https://pub.dev/packages/test/install)
 
 > Test Group
-
+- Beberapa test dengan subjek yang sama diletakan dalam sebuah kelompok
+- Dilakukan dengan menggunakan Group
 
 > Mocking
+- Proses yang terikat dengan sistem eksternal dapat mempengaruhi berjalannya pengujian
+- Pengaruh tersebut dapat mengganggu proses pengujian
+- Dilakukan mocking untuk menghindari masalah masalah tersebut
+- Tambahkan Dependencies Mockito didalam dev_dependencies: https://pub.dev/packages/mockito/install
