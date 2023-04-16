@@ -2,8 +2,8 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:d_method/d_method.dart';
 import 'package:open_file/open_file.dart';
-import '../form/animations/animations.dart';
-import 'model_data_advance.dart';
+import '../../../form/animations/animations.dart';
+import '../../model/model_data_advance.dart';
 
 class ContactPageAdvanceProvider with ChangeNotifier {
   Color _currentColor = Colors.orange;

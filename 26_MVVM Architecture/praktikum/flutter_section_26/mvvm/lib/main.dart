@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mvvm/advance_form/screen/contact_advance/contact_page_advance.dart';
+import 'package:mvvm/advance_form/screen/contact_advance/contact_page_advance_provider.dart';
 // import 'package:mvvm/form/contact_page.dart';
 // import 'package:mvvm/form/contact_page_provider.dart';
 import 'package:mvvm/latihan/screen/contact/contact_view_model.dart';
@@ -8,17 +10,23 @@ import 'latihan/screen/contact/contact_screen.dart';
 
 void main() {
   runApp(
-    /// Tugas
+    /// Tugas Form
     // ChangeNotifierProvider<ContactPageProvider>(
     //   create: (context) => ContactPageProvider(),
     //   child: const MyApp(),
     // ),
 
-    /// Latihan
-    ChangeNotifierProvider<ContactViewModel>(
-      create: (_) => ContactViewModel(),
+    /// Tugas Advance Form
+    ChangeNotifierProvider<ContactPageAdvanceProvider>(
+      create: (_) => ContactPageAdvanceProvider(),
       child: const MyApp(),
     ),
+
+    /// Latihan
+    // ChangeNotifierProvider<ContactViewModel>(
+    //   create: (_) => ContactViewModel(),
+    //   child: const MyApp(),
+    // ),
   );
 }
 
@@ -34,7 +42,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: const ContactPage(title: 'Contacts'),
-      home: const ContactScreen(),
+      // home: const ContactScreen(),
+      home: const ContactPageAdvance(),
     );
   }
 }

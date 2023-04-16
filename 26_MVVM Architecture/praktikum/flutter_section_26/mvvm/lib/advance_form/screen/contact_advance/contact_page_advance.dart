@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import 'contact_page_advance_provider.dart';
 
 class ContactPageAdvance extends StatelessWidget {
-  const ContactPageAdvance({super.key, required String title});
+  const ContactPageAdvance({super.key});
 
   @override
   Widget build(BuildContext context) {
