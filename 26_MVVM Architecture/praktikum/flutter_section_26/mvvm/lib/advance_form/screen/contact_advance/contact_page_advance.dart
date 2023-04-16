@@ -23,30 +23,6 @@ class ContactPageAdvance extends StatelessWidget {
               header(),
               formGroup(context),
               listContact(),
-
-              /// Kondisi apabila kontak kosong
-              Consumer<ContactPageAdvanceProvider>(
-                builder: (context, valueprov, child) =>
-                    valueprov.contacts.isEmpty
-                        ? const Padding(
-                            padding: EdgeInsets.all(12.0),
-                            child: Text(
-                              'No Contact',
-                              style: TextStyle(
-                                fontSize: 22,
-                                color: Colors.red,
-                              ),
-                            ),
-                          )
-                        : ListView.builder(
-                            shrinkWrap: true,
-                            itemCount: valueprov.contacts.length,
-                            itemBuilder: (context, index) => getRowList(index),
-                          ),
-              ),
-              const SizedBox(
-                height: 40,
-              )
             ],
           ),
         ),
@@ -165,17 +141,40 @@ class ContactPageAdvance extends StatelessWidget {
 
   Widget listContact() {
     return Column(
-      children: const [
-        Text(
+      children: [
+        const Text(
           'List Contacts',
           style: TextStyle(
             fontSize: 28,
             fontWeight: FontWeight.w500,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
+
+        /// Kondisi apabila kontak kosong
+        Consumer<ContactPageAdvanceProvider>(
+          builder: (context, valueprov, child) => valueprov.contacts.isEmpty
+              ? const Padding(
+                  padding: EdgeInsets.all(12.0),
+                  child: Text(
+                    'No Contact',
+                    style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.red,
+                    ),
+                  ),
+                )
+              : ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: valueprov.contacts.length,
+                  itemBuilder: (context, index) => getRowList(index),
+                ),
+        ),
+        const SizedBox(
+          height: 40,
+        )
       ],
     );
   }
