@@ -35,8 +35,31 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  provider: ^6.0.5
+
+  # HTTP request ke server atau RESTful API
   dio: ^5.1.1
+
+  # State Management Provider
+  provider: ^6.0.5
+
+  # Google Fonts
+  google_fonts: ^4.0.3
+
+  # Formating Tanggal
+  intl: ^0.17.0
+
+  # Untuk memilih warna
+  flutter_colorpicker: ^1.0.3
+
+  # Mengakses storage penyimpanan handphone
+  file_picker: ^4.3.3
+  
+  # Membuka file
+  open_file: ^3.2.1
+
+  # Print DebugConsole
+  d_method: ^0.2.0
+
 
 dev_dependencies:
   flutter_test:

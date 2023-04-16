@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'animations.dart';
-import 'model_data.dart';
+import '../../animations/animations.dart';
+import '../../model/model_data.dart';
 
 class ContactPageProvider with ChangeNotifier {
   var formKey = GlobalKey<FormState>();
