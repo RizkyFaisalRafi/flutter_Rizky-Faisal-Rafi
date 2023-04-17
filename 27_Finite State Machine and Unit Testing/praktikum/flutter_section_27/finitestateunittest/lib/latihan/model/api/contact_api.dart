@@ -7,8 +7,11 @@ class ContactApi {
   // dengan metode REST API
   // dan mengubah data tersebut kedalam bentuk class Contact
   static Future<List<ContactModel>> getContacts() async {
-    final response = await Dio().get(
-        "https://my-json-server.typicode.com/hadihammurabi/flutter-webservice/contacts");
+    // Hapus static apabila menggunakan test mocking
+    final response = await Dio(
+            BaseOptions(connectTimeout: const Duration(seconds: 3000)))
+        .get(
+            "https://my-json-server.typicode.com/hadihammurabi/flutter-webservice/contacts");
 
     List<ContactModel> contacts = (response.data as List)
         .map((e) =>

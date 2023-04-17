@@ -11,7 +11,7 @@ void main() {
   runApp(
     /// Tugas Form
     // ChangeNotifierProvider<ContactPageProvider>(
-    //   create: (context) => ContactPageProvider(),
+    //   create: (_) => ContactPageProvider(),
     //   child: const MyApp(),
     // ),
 
@@ -41,8 +41,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: const ContactPage(title: 'Contacts'),
-      home: const ContactScreen(),
       // home: const ContactPageAdvance(),
+      home: const ContactScreen(),
     );
   }
 }
